@@ -34,7 +34,7 @@ if prompt := st.chat_input("Ta réponse ou ton code ici..."):
     # Générer la réponse du Mentor
     with st.chat_message("assistant"):
         with st.spinner("Le mentor réfléchit..."):
-            # On passe l'historique pour garder le contexte
+            # On passe l'historique pour garder le contexte (pas tout)
             full_history = st.session_state.messages
             response = get_mentor_response(prompt, full_history)
             st.markdown(response)
